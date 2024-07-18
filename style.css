@@ -562,8 +562,9 @@ opacity: 1;
   text-align: center;
   width: 600px;
   margin-left: 25%;
-  font-size: 20px;
+  font-size: 18px;
   font-family: Garamond;
+  font-weight: 100;
 }
 .tag{
   margin-top: 90%;
@@ -577,6 +578,50 @@ opacity: 1;
                          'item4 item4 item2 item6';
     grid-gap: 10px;
 }
+.btn {
+  width: 7.5em;
+  height: 1.7em;
+  margin: 0.5em;
+  background: lightcoral;
+  color: black;
+  border: none;
+  border-radius: 0.625em;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+ }
+ .btn a{
+  font-family: Garamond;
+  text-decoration: none;
+  font-size: 18px;
+  color: #090909;
+ }
+ button:hover {
+  color: black;
+ }
+ 
+ button:after {
+  content: "";
+  background: white;
+  position: absolute;
+  z-index: -1;
+  left: -20%;
+  right: -20%;
+  top: 0;
+  bottom: 0;
+  transform: skewX(-45deg) scale(0, 1);
+  transition: all 0.5s;
+ }
+ 
+ button:hover:after {
+  transform: skewX(-45deg) scale(1, 1);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+ }
+
 
 .item {
     background-repeat: no-repeat !important;
