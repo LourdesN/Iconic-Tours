@@ -140,15 +140,15 @@ body{
   width: 100%;
   flex: 1;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 100px;
 }
 .booking-container form .form-group .input-group {
   position: relative;
   width: 100%;
 }
 .booking-container form .form-group .input-group input {
-  width: 100%;
+  width: 140%;
   padding: 10px 0;
   font-size: 1rem;
   border: none;
@@ -188,9 +188,15 @@ background: black;
 border-radius: 50%;
 cursor: pointer;
 transition: .5s;
+margin-left: 60%;
 }
 .header-image-container .booking-container .btn:hover {
 background: gray;
+color: #090909;
+}
+input::placeholder{
+  color: #090909;
+  font-family: cursive;
 }
 .reveal {
 position: relative;
@@ -202,6 +208,26 @@ transition-property: transform, opacity;
 .reveal.active {
 transform: translateY(0px);
 opacity: 1;
+}
+#search-results {
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 18px;
+}
+#search-results h3{
+  color: lightcoral;
+}
+
+#search-results div {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+  color: white;
+  width: 500px;
+  margin-left: 30%;
+  
 }
 
 @media (width<900px) {
@@ -233,15 +259,36 @@ opacity: 1;
    }
    .header-image-container .booking-container form {
        grid-template-columns: repeat(1, 1fr);
+       gap: 1rem;
+       
+   }
+   .booking-container form .form-group .input-group input {
+    width: 100%;
    }
    .client .client-grid {
      grid-template-columns: repeat(1, 1fr);
    }
+   #search-results div {
+    margin-left: 1%;
+    width: 370px;
    }
-   @media only screen and (max-width: 768px){
+   }
+   @media only screen and (width: 768px){
      .booking-container{
-       bottom: -1rem;
+       bottom: -9rem;
      }
+     .header-image-container .booking-container form {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;  
+  }
+  .booking-container form .form-group .input-group input {
+    width: 100%;
+   }
+   #search-results div {
+    margin-left: 18%;
+    width: 470px;
+    margin-top: 15%;
+   }
    }
    
 
@@ -821,9 +868,13 @@ opacity: 1;
   .serve{
       display: grid;
       grid-template-columns: repeat(2, 1fr); 
-      margin-top: 6%;
       margin-left: 5%;
       gap: 53px;
+  }
+  .travel{
+    color: white;
+    text-align: center;
+    margin-top: 17%;
   }
 }
 
