@@ -52,7 +52,7 @@ document.getElementById('tour-search-form').addEventListener('submit', function(
   let startDate = document.getElementById('start-date').value;
   let endDate = document.getElementById('end-date').value;
   
-  fetch(`http://localhost:3000/api/tours?location=${encodeURIComponent(location)}&start_date=${startDate}&end_date=${endDate}`)
+  fetch(`https://tour-api-iota.vercel.app/api/tours?location=${encodeURIComponent(location)}&start_date=${startDate}&end_date=${endDate}`)
       .then(response => response.json())
       .then(data => {
           displayResults(data);
